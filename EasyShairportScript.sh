@@ -1,3 +1,7 @@
+#EASY SHAIRPORT SCRIPT
+#WRITTEN BY PUPDAD
+#YOU MAY HAVE TO CHANGE LINE 58 DEPENDING ON HOW YOU INSTALLED SHAIRPORT
+
 #!/bin/bash
 #Shairport execute with naming
 
@@ -51,6 +55,7 @@ case $action in
   echo $input > ~/spn.dat
   file="~/spn.dat"
   name=$(cat "$file")
+#YOU MAY HAVE TO CHANGE THIS DEPENDING ON HOW YOU INSTALLED SHAIRPORT (Just change "~/projects/airplay/shairport" to whatever your shairport directory is (the one that has the main shairport script on the top level))
   (cd ~/projects/airplay/shairport && exec shairport --name=$name)
  ;;
 esac
